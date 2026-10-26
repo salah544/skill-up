@@ -1,0 +1,155 @@
+/* Shared styles for the standalone legal pages (mentions-legales / politique-de-confidentialite).
+   Mirrors the design tokens in src/index.css — keep the two in step. */
+
+:root {
+  --navy: #0d3664;
+  --cerulean: #0072ba;
+  --orange: #f28c00;
+  --white: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.78);
+  --text-muted: rgba(255, 255, 255, 0.68);
+  --border: rgba(255, 255, 255, 0.16);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--white);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 96px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--white);
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.updated {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 32px;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 44px 0 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+h2:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+p,
+li {
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+a {
+  color: var(--orange);
+}
+
+dl {
+  margin: 0 0 16px;
+}
+
+dt {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 14px;
+}
+
+dd {
+  color: var(--text-secondary);
+  margin: 2px 0 0;
+}
+
+/* Callout explaining that this page still needs real company details. */
+.notice {
+  background:
+    linear-gradient(rgba(242, 140, 0, 0.12), rgba(242, 140, 0, 0.12)),
+    rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(242, 140, 0, 0.55);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 0 0 32px;
+}
+
+.notice p {
+  color: var(--orange);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.notice p + p {
+  margin-top: 8px;
+}
+
+/* Fields only the business owner can supply. */
+.todo {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
